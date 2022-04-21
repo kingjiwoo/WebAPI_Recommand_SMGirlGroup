@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>kwangya</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>
+            <img src="./image/kwangya_aespa.jpg" class="img-fluid" alt=""/>
+        </title>
+      </head>
+      <body>
+        <h1>여러분과 함께 광야로 떠날 SM아티스트 찾기...{{ kwangya }}</h1>
+        <h2>여러분의 음악 취향을 알려주시면 </h2>
+        <h3>여러분의 광야를 외롭지 않게 할 여성 artist를 추천해드립니다.</h3>
+        <form action="/post" method="post">
+            ​	 <p>acousticness :<input type="text" id="acousticness", name="acousticness"></p>
+                <p>춤추기 조하? :<input type="text" id="danceability", name="danceability"> </p>
+                <p>씐나? : <input type="text" id="energy", name="energy"></p>
+                <p>가상악기사용적어? : <input type="text" id="instrumentalness", name="instrumentalness"></p>
+                <p>높은 키의 노래? : <input type="text" id="key", name="key"></p>
+                <p>생동감있어? : <input type="text" id="liveness", name="liveness"></p>
+                <p>임팩트 있는 악기 소리? : <input type="text" id="loudness", name="loudness"></p>
+                <p>장조/단조? :<input type="text" id="mode", name="mode"></p>
+                <p>가사가 노랠 꽊 : <input type="text" id="speechness", name="speechness"></p>
+                <p>빠른노래 두둠칫 : <input type="text" id="tempo", name="tempo"></p>
+                <p>긍정적인 감성 : <input type="text" id="valence", name="valence"></p>
+
+                <p>취향을 입력하고 제출을 누르세요 <input type="submit" value="제출" onclick="alert('제출 완료!')" /></p>
+            </form>
+        <img src="./image/kwangya_aespa.jpg" class="img-fluid" alt="..."/>
+        
+        
+        {% block main_body %}{% endblock %}
+        
+      </body>
+     </html>
+     
